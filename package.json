@@ -1,0 +1,11 @@
+{
+  "name": "card",
+  "version": "1.0.0",
+  "description": "",
+  "main": "UI_file.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC"
+}
