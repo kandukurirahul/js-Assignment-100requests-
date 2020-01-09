@@ -1,6 +1,6 @@
-function U(dob,app){
-    for(var i=0;i<dob.length;i++){
-        console.log(dob)
+function fetch(data,app){
+    for(var i=0;i<data.length;i++){
+        console.log(data)
         
         const card = document.createElement('div')
         card.setAttribute('class','card')
@@ -9,24 +9,24 @@ function U(dob,app){
         const details=document.createElement('div')
         details.setAttribute('class','details')
         app.appendChild(details);
-        img=dob[i].picture.large;
+        img=data[i].picture.large;
         addimage(img,details)
         
-        fname=dob[i].name.first;
+        fname=data[i].name.first;
         addfirstname(fname,details)
         
-        lname=dob[i].name.last;
+        lname=data[i].name.last;
         addlastname(lname,details)
         
-        email=dob[i].email;
+        email=data[i].email;
         addemail(email,details)
         
-        gender=dob[i].gender;
+        gender=data[i].gender;
         addgender(gender,details)
         
         card.appendChild(details)
         //addperson(fname,lname,img,email);
-        //addSingleData(dob[i])
+        //addSingleData(data[i])
         
     }
 }
@@ -43,7 +43,7 @@ function addimage(avatar,info)
           console.log("no image found")
           const na=document.createElement('div')
           na.textContent=frst[0]+lst[0]
-          na.setAttribute('class','na')
+          na.setAttribute('class','notavailable')
           info.appendChild(na)
       }
 }
@@ -72,7 +72,7 @@ function addgender(gend,info)
 {
     const g=document.createElement('p')
     g.textContent=gend
-    g.setAttribute('class','g')
+    g.setAttribute('class','gender')
     info.appendChild(g)
 }
 module.exports={addimage,addfirstname,addlastname,addemail,addgender}

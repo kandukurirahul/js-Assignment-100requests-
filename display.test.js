@@ -24,5 +24,5 @@ test('Testing addgender',function(){
     gend="male"
     const info=document.createElement('div')
     addgender(lstname,info)
-    expect(document.getElementsByClassName('g')).toBeTruthy()
+    expect(document.getElementsByClassName('gender')).toBeTruthy()
 });

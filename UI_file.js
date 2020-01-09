@@ -1,19 +1,19 @@
-function U(dob){
-    for(var i=0;i<dob.length;i++){
-        fname=dob[i].name.first;
-        lname=dob[i].name.last;
-        img=dob[i].picture.large;
-        email=dob[i].email;
+function fetch(data){
+    for(var i=0;i<data.length;i++){
+        fname=data[i].name.first;
+        lname=data[i].name.last;
+        img=data[i].picture.large;
+        email=data[i].email;
         addperson(fname,lname,img,email);
-        //addSingleData(dob[i])
+        //addSingleData(data[i])
     }
 }
 
-/*function addSingleData(dob){
-    fname=dob.name.first;
-    lname=dob.name.last;
-    img=dob.picture.large;
-    email=dob.email;
+/*function addSingleData(data){
+    fname=data.name.first;
+    lname=data.name.last;
+    img=data.picture.large;
+    email=data.email;
     addperson(fname,lname,img,email);
 }*/
 function addperson(frst,lst,avatar,mail)

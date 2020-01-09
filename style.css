@@ -51,7 +51,7 @@
     color:blue;
     padding-left: 10px;
 }
-.na{
+.notavailable{
     height:100px;
     width:100px;
     line-height: 100px;
@@ -60,7 +60,7 @@
     font-size: 50px;
     color:#eee;
 }
-.g{
+.gender{
     font-style: Arial;
     font-size: 20px;
     padding-left: 10px;

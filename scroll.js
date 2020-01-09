@@ -5,7 +5,7 @@
 card.setAttribute('id',card)
 document.body.appendChild(card)*/
 
-var v=1
+
 function load()
 {
   var request = new XMLHttpRequest()
@@ -17,15 +17,15 @@ function load()
   // h.textContent="Contact Details"
   // document.body.appendChild(h)
   request.onload = function() {
-  var data = JSON.parse(this.response)
+  var jsondata = JSON.parse(this.response)
   const app=document.createElement('div')
   app.setAttribute('id','root')
   document.body.appendChild(app)
  
-    var dob=data["results"]
-    console.log(dob.length)
-    if(dob.length>0){
-      U(dob,app)
+    var data=jsondata["results"]
+    console.log(data.length)
+    if(data.length>0){
+      fetch(data,app)
     }
     else
     {
@@ -33,7 +33,7 @@ function load()
     }
   }
   request.send()
-  v=v+1
+
 }  
 window.onscroll = function() {
     
@@ -44,4 +44,3 @@ window.onscroll = function() {
         load()
     }
   }
- // module.exports={load}
